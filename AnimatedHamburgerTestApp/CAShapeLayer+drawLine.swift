@@ -121,7 +121,7 @@ extension CAShapeLayer
     
     func drawLine(fromPoint: CGPoint, toPoint: CGPoint, thickness: CGFloat, color: UIColor, alpha: Float)
     {
-        self.drawLine(fromPoint, toPoint: toPoint, thickness: thickness, color: color, alpha: alpha, capType: kCALineCapSquare)
+        self.drawLine(fromPoint, toPoint: toPoint, thickness: thickness, color: color, alpha: alpha, capType: kCALineCapButt)
     }
     
     

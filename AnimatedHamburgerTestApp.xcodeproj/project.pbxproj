@@ -19,6 +19,8 @@
 		5925EF061A0847ED002E6F5B /* CAShapeLayer+drawLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5925EF041A0847ED002E6F5B /* CAShapeLayer+drawLine.swift */; };
 		59D45A671A143DD800A9F555 /* CALayer+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D45A661A143DD800A9F555 /* CALayer+Animations.swift */; };
 		59D45A681A143DD800A9F555 /* CALayer+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D45A661A143DD800A9F555 /* CALayer+Animations.swift */; };
+		59ED1B061A16E55800D46BC2 /* CAShapeLayer+drawLineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ED1B051A16E55800D46BC2 /* CAShapeLayer+drawLineTests.swift */; };
+		59ED1B081A16EF6300D46BC2 /* CALayer+AnimationsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ED1B071A16EF6300D46BC2 /* CALayer+AnimationsTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		5925EF011A08466B002E6F5B /* CTEAnimatedHamburgerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTEAnimatedHamburgerView.swift; sourceTree = "<group>"; };
 		5925EF041A0847ED002E6F5B /* CAShapeLayer+drawLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAShapeLayer+drawLine.swift"; sourceTree = "<group>"; };
 		59D45A661A143DD800A9F555 /* CALayer+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Animations.swift"; sourceTree = "<group>"; };
+		59ED1B051A16E55800D46BC2 /* CAShapeLayer+drawLineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAShapeLayer+drawLineTests.swift"; sourceTree = "<group>"; };
+		59ED1B071A16EF6300D46BC2 /* CALayer+AnimationsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+AnimationsTest.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				5925EEF71A08462A002E6F5B /* AnimatedHamburgerTestAppTests.swift */,
+				59ED1B051A16E55800D46BC2 /* CAShapeLayer+drawLineTests.swift */,
+				59ED1B071A16EF6300D46BC2 /* CALayer+AnimationsTest.swift */,
 				5925EEF51A08462A002E6F5B /* Supporting Files */,
 			);
 			path = AnimatedHamburgerTestAppTests;
@@ -237,6 +243,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5925EF061A0847ED002E6F5B /* CAShapeLayer+drawLine.swift in Sources */,
+				59ED1B061A16E55800D46BC2 /* CAShapeLayer+drawLineTests.swift in Sources */,
+				59ED1B081A16EF6300D46BC2 /* CALayer+AnimationsTest.swift in Sources */,
 				5925EF031A08466B002E6F5B /* CTEAnimatedHamburgerView.swift in Sources */,
 				59D45A681A143DD800A9F555 /* CALayer+Animations.swift in Sources */,
 				5925EEF81A08462A002E6F5B /* AnimatedHamburgerTestAppTests.swift in Sources */,

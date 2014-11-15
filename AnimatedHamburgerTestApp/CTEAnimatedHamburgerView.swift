@@ -44,7 +44,7 @@ class CTEAnimatedHamburgerView: UIView {
     let numberOfLinesInHamburgerView: CGFloat = 3.0
     var delegate: CTEAnimatedHamburgerDelegate?
     var buttonType: CTEAnimatedHamburgerType = .CTEAnimatedHamburgerTypeClose
-    var fullTransitionDuration: CFTimeInterval = 1.5
+    var fullTransitionDuration: CFTimeInterval = 0.8
     lazy var midXPosition: CGFloat = {(self.frame.width * 0.5)}()
     lazy var topPosition: CGPoint = {CGPoint(x: self.midXPosition, y: self.minYPosition())}()
     lazy var bottomPosition: CGPoint = {CGPoint(x: self.midXPosition, y: self.maxYPosition())}()
@@ -141,9 +141,9 @@ class CTEAnimatedHamburgerView: UIView {
     
     func setUpLines()
     {
-        self.topLineLayer = createLineLayerWithPosition(CGPoint(x: midXPosition, y: minYPosition()), lineColor:color)
-        self.midLineLayer = createLineLayerWithPosition(CGPoint(x: midXPosition, y: midYPosition), lineColor:color)
-        self.bottomLineLayer = createLineLayerWithPosition(CGPoint(x: midXPosition, y: maxYPosition()), lineColor:color)
+        self.topLineLayer = createLineLayerWithPosition(CGPoint(x: midXPosition, y: minYPosition()), length: lineLength, lineColor:color)
+        self.midLineLayer = createLineLayerWithPosition(CGPoint(x: midXPosition, y: midYPosition), length: lineLength, lineColor:color)
+        self.bottomLineLayer = createLineLayerWithPosition(CGPoint(x: midXPosition, y: maxYPosition()), length: lineLength, lineColor:color)
         
         self.layer.addSublayer(self.topLineLayer)
         self.layer.addSublayer(self.midLineLayer)
@@ -164,10 +164,10 @@ class CTEAnimatedHamburgerView: UIView {
     }
     
     
-    func createLineLayerWithPosition(position: CGPoint, lineColor: UIColor) -> CAShapeLayer
+    func createLineLayerWithPosition(position: CGPoint, length: CGFloat , lineColor: UIColor) -> CAShapeLayer
     {
         let layer: CAShapeLayer = CAShapeLayer()
-        layer.drawLine(CGPointMake(0 , 0), toPoint: CGPointMake(lineLength, 0), thickness: lineThickness, color: lineColor, alpha: 1.0, capType:lineCapType)
+        layer.drawLine(CGPointMake(0 , 0), toPoint: CGPointMake(length, 0), thickness: lineThickness, color: lineColor, alpha: 1.0, capType:lineCapType)
         layer.position = position
         layer.bounds = CGPathGetPathBoundingBox(layer.path)
         
@@ -249,7 +249,6 @@ class CTEAnimatedHamburgerView: UIView {
         case .CTEAnimatedHamburgerTypeClose:
             
             updateLinesForClose(percentComplete, animate: false)
-            
             
         case .CTEAnimatedHamburgerTypeBack:
             
