@@ -52,6 +52,7 @@ class CTEAnimatedHamburgerView: UIView {
     lazy var insetFrame: CGRect = {CGRectInset(self.frame, self.frame.width*0.1, self.frame.height*0.1)}()
     lazy var totalLineLength: CGFloat = {(self.lineCapType.isEqualToString(kCALineCapButt)) ? self.lineLength : (self.lineLength + self.lineThickness)}()
     lazy var lineLength: CGFloat = {self.calculateLineLength()}()
+    lazy var ratio: CGFloat = {(1.0 - self.rotationalCircleRadius() / (self.totalLineLength * 0.5)) * 0.5}()
     private var topLineLayer = CAShapeLayer()
     private var midLineLayer = CAShapeLayer()
     private var bottomLineLayer = CAShapeLayer()
@@ -359,7 +360,6 @@ class CTEAnimatedHamburgerView: UIView {
     {
         let rightControlPoint: CGPoint = CGPoint(x: (midXPosition + (totalLineLength * 0.5)), y: midYPosition)
         let leftControlPoint: CGPoint = CGPoint(x: (midXPosition - (totalLineLength * 0.5)), y: midYPosition)
-        let ratio: CGFloat = (1.0 - rotationalCircleRadius() / (totalLineLength * 0.5)) * 0.5
         let midAngle: CGFloat = (CGFloat(M_PI - rotationBugHack) * percentComplete)
         let bottomAngle: CGFloat = (CGFloat(M_PI_2 + M_PI_4) * percentComplete)
         

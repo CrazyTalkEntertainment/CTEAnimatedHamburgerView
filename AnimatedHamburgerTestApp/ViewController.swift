@@ -27,7 +27,7 @@ import UIKit
 
 class ViewController: UIViewController, CTEAnimatedHamburgerDelegate {
 
-    lazy var testView:CTEAnimatedHamburgerView = {CTEAnimatedHamburgerView(frame: CGRectMake((self.view.frame.width * 0.5) - 55, 110, 100, 100))}()
+    lazy var testView:CTEAnimatedHamburgerView = {CTEAnimatedHamburgerView(frame: CGRectMake((self.view.frame.width * 0.5) - 55, 80, 100, 100))}()
     @IBOutlet var slider: UISlider?
     @IBOutlet var testView2: CTEAnimatedHamburgerView?
     var previousSliderValue: CGFloat = 0.0

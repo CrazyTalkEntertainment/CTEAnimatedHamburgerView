@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qqa-bc-nLz">
-                                <rect key="frame" x="14" y="503" width="572" height="31"/>
+                                <rect key="frame" x="33" y="503" width="534" height="31"/>
                                 <connections>
                                     <action selector="didchangeSliderValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="DSN-AQ-gfu"/>
                                 </connections>
@@ -56,6 +56,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Qqa-bc-nLz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4NN-CV-fMA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qqa-bc-nLz" secondAttribute="trailing" constant="19" id="4gc-zp-dcy"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Fea-OH-9U4" secondAttribute="bottom" constant="186" id="Ds9-wk-1hp"/>
                             <constraint firstItem="Qqa-bc-nLz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="GUh-Cm-9IH"/>
                             <constraint firstItem="Fea-OH-9U4" firstAttribute="top" relation="greaterThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IGt-jN-sLD"/>
@@ -63,10 +64,17 @@
                             <constraint firstAttribute="centerX" secondItem="Fea-OH-9U4" secondAttribute="centerX" id="OYG-9K-LsT"/>
                             <constraint firstItem="t15-UB-dgl" firstAttribute="top" relation="greaterThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="UmL-ZG-85m"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t15-UB-dgl" secondAttribute="bottom" constant="20" id="XWK-Yy-sCf"/>
+                            <constraint firstItem="Qqa-bc-nLz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="19" id="jli-my-hTs"/>
                             <constraint firstAttribute="centerX" secondItem="Qqa-bc-nLz" secondAttribute="centerX" id="nmc-Wq-myr"/>
                             <constraint firstItem="Qqa-bc-nLz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tBo-jU-Cwa"/>
                             <constraint firstItem="t15-UB-dgl" firstAttribute="top" secondItem="Qqa-bc-nLz" secondAttribute="bottom" constant="17" id="xKk-DR-JST"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GUh-Cm-9IH"/>
+                                <exclude reference="tBo-jU-Cwa"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="slider" destination="Qqa-bc-nLz" id="484-vB-aP4"/>
